@@ -18,6 +18,7 @@ build/
 # Environment
 .env
 .env.production
+git_clone.txt
 
 # IDE
 .vscode/
