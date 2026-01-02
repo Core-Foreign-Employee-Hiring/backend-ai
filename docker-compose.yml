@@ -5,7 +5,7 @@ services:
     env_file:
       - .env.production
     volumes:
-      - db_data:/app
+      - db_data:/data
 
   caddy:
     image: caddy:2-alpine

@@ -10,7 +10,7 @@ class Settings(BaseSettings):
         extra="ignore",  # 정의되지 않은 환경변수 무시
     )
 
-    database_url: str = "sqlite:///./database.db"
+    database_url: str = "sqlite:////data/database.db"
     secret_key: str = "your-secret-key-change-this-in-production"
 
     # OpenRouter API 설정
