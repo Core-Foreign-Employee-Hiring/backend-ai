@@ -3,7 +3,7 @@ FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim
 WORKDIR /app
 
 # UV 캐시 활용을 위해 의존성 파일 먼저 복사
-COPY pyproject.toml ./
+COPY pyproject.toml README.md ./
 
 # 의존성 설치
 RUN uv sync --no-dev
