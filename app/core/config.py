@@ -4,7 +4,11 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     """애플리케이션 설정"""
 
-    model_config = SettingsConfigDict(env_file=".env", case_sensitive=False)
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        case_sensitive=False,
+        extra="ignore",  # 정의되지 않은 환경변수 무시
+    )
 
     database_url: str = "sqlite:///./database.db"
     secret_key: str = "your-secret-key-change-this-in-production"
